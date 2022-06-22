@@ -190,7 +190,7 @@ class Booru(commands.Cog):
             await ctx.send(embed=embed)
 
     @commands.command()
-    async def taglist(self, ctx):
+    async def tag_list(self, ctx):
         config.wlog('list', ctx)
         embed = (Embed(title='Самые частые тэги',
                        description='Примечание: каких-то тэгов нет на определенных сайтах, если в запросе бот ничего не выдаст - поменяйте тэг.')

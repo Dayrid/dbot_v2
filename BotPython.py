@@ -70,7 +70,8 @@ async def help(ctx):
                          inline=False)
               .add_field(name='>vk albums [ваш id]', value='Предоставляет список ваших альбомов в вк с их id.')
               .add_field(name='>vk play [id альбома] [кол-во песен]',
-                         value='Играет определенное количество песен с альбома(Альбом должен быть создан исключительно вами)')
+                         value='Играет определенное количество песен с альбома(Альбом должен быть создан '
+                               'исключительно вами)')
               .add_field(name='`Команды для радио:`',
                          value='Примечание: радио в дискорде часто зависает, пропишите >radio_stop если бот завис.',
                          inline=False)
@@ -79,7 +80,9 @@ async def help(ctx):
     await ctx.send(embed=embed1, delete_after=300.0)
     embed2 = (discord.Embed(title='Помощь[2]', color=0x3498db)
               .add_field(name='`Команды для картинок:`',
-                         value='Поддерживаемые сайты: [danbooru](https://danbooru.donmai.us), [konachan](https://konachan.net), [safebooru](https://safebooru.org), [yande.re](https://yande.re), [gelbooru](https://gelbooru.com), [rule34](https://rule34.xxx).',
+                         value='Поддерживаемые сайты: [danbooru](https://danbooru.donmai.us), [konachan]('
+                               'https://konachan.net), [safebooru](https://safebooru.org), [yande.re]('
+                               'https://yande.re), [gelbooru](https://gelbooru.com), [rule34](https://rule34.xxx).',
                          inline=False)
               .add_field(name='В поле сайт надо указать одну букву сайта d/k/s/y.',
                          value='Пример >b d kitsune - выведет арт на площадке Danbooru по тэгу kitsune')
@@ -89,10 +92,12 @@ async def help(ctx):
               .add_field(name='>r34_many кол-во(макс 20) тэги', value='Ищет ищет несколько артов с платформы Rule34.')
               .add_field(name='>list', value='Выводит самые частые тэги (если несколько, то писать через пробел).')
               .add_field(name='`Команды для игр:`',
-                         value='Примечание: некоторые команды не совсем стабильны, отправляйте только то, что тут описано.',
+                         value='Примечание: некоторые команды не совсем стабильны, отправляйте только то, что тут '
+                               'описано.',
                          inline=False)
               .add_field(name='>rr add/play',
-                         value='Игра русская рулетка, для включения вас в игру пропишите >rr add, для начала - >rr start')
+                         value='Игра русская рулетка, для включения вас в игру пропишите >rr add, для начала - >rr '
+                               'start')
               .add_field(name='>flip', value='Кидает монетку.')
               .add_field(name='>dice', value='Бросает игральные кости.')
               .add_field(name='>knb камень/ножницы/бумага',
