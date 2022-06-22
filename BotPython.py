@@ -107,4 +107,4 @@ async def help(ctx):
     # config.wlog('help', ctx)
 
 
-bot.run(os.environ.get("DISCORD_TOKEN"))
+bot.run(os.getenv("DISCORD_TOKEN"))
