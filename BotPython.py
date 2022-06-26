@@ -12,6 +12,7 @@ nest_asyncio.apply()
 db = pymysql.connect(host=os.environ.get("MYSQL_IP"), port=3306, user=os.environ.get("MYSQL_USER"),
                      password=os.environ.get("MYSQL_PASSWORD"), database=os.environ.get("MYSQL_DB"))
 sql = db.cursor()
+sql.execute("USE bot_db;")
 bot = commands.Bot(command_prefix='>')
 initial_extensions = [
     'cogs.chat',
@@ -35,8 +36,6 @@ async def on_ready():
     await bot.change_presence(
         activity=discord.Activity(type=discord.ActivityType.watching, name="anime | >help")  # Статус "смотрит anime"
     )
-    for guild in bot.guilds:
-        print(f'{guild.name}(id:{guild.id})')
 
 
 @bot.event
